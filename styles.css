@@ -356,6 +356,7 @@ button {
 
 .flywheel {
   position: relative;
+  --node-size: clamp(142px, 13vw, 164px);
   width: min(620px, 100%);
   aspect-ratio: 1;
   margin: 22px auto 0;
@@ -369,12 +370,8 @@ button {
 }
 
 .orbit-ring--outer {
-  inset: 8%;
-  border: 1px solid rgba(255, 255, 255, 0.32);
-  border-right-color: rgba(255, 255, 255, 0.8);
-  border-bottom-color: rgba(255, 255, 255, 0.78);
-  animation: orbitSpin 18s linear infinite;
-  mask-image: conic-gradient(transparent 0deg, #000 25deg, #000 135deg, transparent 164deg, #000 195deg, #000 312deg, transparent 338deg);
+  inset: 15%;
+  border: 0;
 }
 
 .orbit-ring--inner {
@@ -383,59 +380,42 @@ button {
   animation: orbitSpinReverse 14s linear infinite;
 }
 
-.orbit-path {
+.cycle-arrows {
   position: absolute;
-  inset: 16%;
-  border-radius: 50%;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  color: rgba(255, 255, 255, 0.88);
   pointer-events: none;
+  overflow: visible;
 }
 
-.orbit-path::before,
-.orbit-path::after {
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  border-top: 1px solid rgba(255, 255, 255, 0.9);
-  border-right: 1px solid rgba(255, 255, 255, 0.9);
-  content: "";
+.cycle-arc {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.35;
+  stroke-linecap: round;
+  marker-end: url("#cycle-arrowhead");
+  filter: drop-shadow(0 0 9px rgba(255, 255, 255, 0.32));
+  stroke-dasharray: 440;
+  stroke-dashoffset: 880;
+  animation: cycleTrace 7.5s linear infinite;
 }
 
-.orbit-path--one {
-  animation: orbitSpin 11s linear infinite;
+.cycle-arc--two {
+  animation-delay: -2.5s;
 }
 
-.orbit-path--one::before {
-  top: 5%;
-  right: 20%;
-  transform: rotate(72deg);
-}
-
-.orbit-path--one::after {
-  right: 0;
-  bottom: 32%;
-  transform: rotate(45deg);
-}
-
-.orbit-path--two {
-  animation: orbitSpinReverse 15s linear infinite;
-}
-
-.orbit-path--two::before {
-  bottom: 7%;
-  left: 28%;
-  transform: rotate(205deg);
-}
-
-.orbit-path--two::after {
-  top: 36%;
-  left: -1%;
-  transform: rotate(235deg);
+.cycle-arc--three {
+  animation-delay: -5s;
 }
 
 .flywheel-center {
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: 2;
   display: grid;
   place-items: center;
   width: 156px;
@@ -466,13 +446,19 @@ button {
 
 .wheel-node {
   position: absolute;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: clamp(138px, 17vw, 172px);
-  aspect-ratio: 1;
-  padding: 20px;
+  width: var(--node-size);
+  height: var(--node-size);
+  min-width: var(--node-size);
+  min-height: var(--node-size);
+  max-width: var(--node-size);
+  max-height: var(--node-size);
+  padding: 18px;
+  overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 50%;
   background:
@@ -488,17 +474,17 @@ button {
 .wheel-node--top {
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 0);
 }
 
 .wheel-node--left {
   bottom: 10%;
-  left: 3%;
+  left: 0;
   animation-delay: 0.8s;
 }
 
 .wheel-node--right {
-  right: 3%;
+  right: 0;
   bottom: 10%;
   animation-delay: 1.6s;
 }
@@ -512,7 +498,7 @@ button {
 
 .wheel-node strong {
   color: #fff;
-  font-size: clamp(14px, 1.45vw, 18px);
+  font-size: clamp(13px, 1.15vw, 16px);
   font-weight: 700;
   line-height: 1.2;
 }
@@ -765,6 +751,24 @@ button {
   }
 }
 
+@keyframes cycleTrace {
+  0% {
+    stroke-dashoffset: 880;
+    opacity: 0.38;
+  }
+  20% {
+    opacity: 0.96;
+  }
+  58% {
+    stroke-dashoffset: 0;
+    opacity: 0.88;
+  }
+  100% {
+    stroke-dashoffset: -440;
+    opacity: 0.38;
+  }
+}
+
 @keyframes nodePulse {
   0%,
   100% {
@@ -894,12 +898,12 @@ button {
   }
 
   .flywheel {
+    --node-size: clamp(108px, 30vw, 128px);
     width: min(100%, 420px);
     margin-top: 38px;
   }
 
   .wheel-node {
-    width: clamp(104px, 31vw, 128px);
     padding: 12px;
   }
 

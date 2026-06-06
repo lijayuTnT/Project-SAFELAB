@@ -66,12 +66,28 @@
           <div class="flywheel" aria-label="Evaluation, data, and models form a continuous improvement loop">
             <div class="orbit-ring orbit-ring--outer"></div>
             <div class="orbit-ring orbit-ring--inner"></div>
+            <svg class="cycle-arrows" viewBox="0 0 620 620" aria-hidden="true">
+              <defs>
+                <marker
+                  id="cycle-arrowhead"
+                  viewBox="0 0 14 14"
+                  refX="10"
+                  refY="7"
+                  markerWidth="11"
+                  markerHeight="11"
+                  orient="auto-start-reverse"
+                >
+                  <path d="M1 1 L11 7 L1 13" fill="none" stroke="currentColor" stroke-width="1.5" />
+                </marker>
+              </defs>
+              <path class="cycle-arc cycle-arc--one" d="M388 126 C500 166 570 268 548 365" />
+              <path class="cycle-arc cycle-arc--two" d="M492 482 C388 570 238 570 128 482" />
+              <path class="cycle-arc cycle-arc--three" d="M72 365 C58 248 122 165 232 126" />
+            </svg>
             <div class="flywheel-center">
               <span>Continuous</span>
               <span>Improvement</span>
             </div>
-            <div class="orbit-path orbit-path--one"></div>
-            <div class="orbit-path orbit-path--two"></div>
             <article class="wheel-node wheel-node--top">
               <span>01</span>
               <strong>EVALUATION<br />(PICUS)</strong>
@@ -79,16 +95,16 @@
               <p>Discover vulnerabilities anytime, anywhere.</p>
             </article>
             <article class="wheel-node wheel-node--right">
+              <span>02</span>
+              <strong>DATA<br />(HYDRA)</strong>
+              <small>Safety Data Engine</small>
+              <p>Generate diverse safety data at scale.</p>
+            </article>
+            <article class="wheel-node wheel-node--left">
               <span>03</span>
               <strong>MODELS<br />(SAFETY FOUNDATION)</strong>
               <small>Safety Foundation Models</small>
               <p>Align and strengthen models with safety at the core.</p>
-            </article>
-            <article class="wheel-node wheel-node--left">
-              <span>02</span>
-              <strong>DATA<br />(HYDRA)</strong>
-              <small>Safety Data Engine</small>
-              <p>Generate diverse and scalable safety data.</p>
             </article>
           </div>
         </section>
