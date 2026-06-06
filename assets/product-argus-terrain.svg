@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 380" fill="none">
+  <defs>
+    <linearGradient id="ridge" x1="118" y1="300" x2="520" y2="126" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.3" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="0.62" stop-color="#ffffff" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="dot" x1="96" y1="336" x2="520" y2="146" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.26" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="0.62" stop-color="#ffffff" stop-opacity="0.64"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.48"/>
+    </linearGradient>
+    <radialGradient id="haze" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(376 260) rotate(154) scale(245 90)">
+      <stop stop-color="#ffffff" stop-opacity="0.16"/>
+      <stop offset="0.6" stop-color="#ffffff" stop-opacity="0.04"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="fade">
+      <rect width="520" height="380" fill="black"/>
+      <linearGradient id="visible" x1="92" y1="290" x2="520" y2="230" gradientUnits="userSpaceOnUse">
+        <stop stop-color="white" stop-opacity="0"/>
+        <stop offset="0.25" stop-color="white" stop-opacity="0.45"/>
+        <stop offset="0.64" stop-color="white"/>
+        <stop offset="1" stop-color="white" stop-opacity="0.95"/>
+      </linearGradient>
+      <rect x="64" y="112" width="456" height="268" fill="url(#visible)"/>
+    </mask>
+  </defs>
+  <rect x="120" y="178" width="400" height="160" fill="url(#haze)" opacity="0.9"/>
+  <g mask="url(#fade)" stroke="url(#dot)" stroke-linecap="round" stroke-width="2.25" stroke-dasharray="0.1 8.3">
+    <path d="M82 315 C158 284 212 301 278 270 C340 240 394 214 520 128"/>
+    <path d="M96 329 C170 296 226 310 292 282 C354 256 402 230 520 154"/>
+    <path d="M110 344 C184 309 242 321 306 296 C370 272 414 249 520 184"/>
+    <path d="M126 359 C198 323 258 333 320 312 C382 290 426 270 520 218"/>
+    <path d="M148 374 C218 340 276 346 336 330 C394 312 438 294 520 256"/>
+    <path d="M164 298 C226 278 282 284 338 264 C392 246 438 215 520 160"/>
+    <path d="M190 288 C244 272 298 276 350 258 C406 238 448 211 520 176"/>
+    <path d="M218 280 C268 266 316 266 366 252 C416 237 458 221 520 194"/>
+    <path d="M247 274 C292 262 336 258 384 248 C432 238 470 236 520 220"/>
+    <path d="M278 270 C318 260 356 256 402 252 C446 248 482 258 520 258"/>
+    <path d="M312 272 C348 262 384 260 424 266 C462 272 492 292 520 314"/>
+    <path d="M126 350 C166 322 196 302 230 292 C265 281 292 284 325 264"/>
+    <path d="M160 366 C196 326 224 304 260 292 C292 282 320 279 354 255"/>
+    <path d="M198 380 C228 333 258 304 294 289 C330 273 356 259 386 238"/>
+    <path d="M236 380 C260 336 290 304 326 286 C366 267 390 244 420 216"/>
+    <path d="M278 380 C296 334 326 302 362 280 C402 253 430 222 462 184"/>
+    <path d="M322 380 C336 334 364 303 402 274 C442 242 468 198 520 148"/>
+    <path d="M366 380 C378 334 404 305 438 278 C474 250 500 204 520 170"/>
+    <path d="M410 380 C420 336 440 312 468 290 C492 271 505 238 520 202"/>
+    <path d="M454 380 C462 340 476 320 494 302 C508 288 514 258 520 226"/>
+  </g>
+  <g fill="#fff" opacity="0.42">
+    <circle cx="180" cy="258" r="0.8"/>
+    <circle cx="215" cy="246" r="0.7"/>
+    <circle cx="256" cy="248" r="0.9"/>
+    <circle cx="302" cy="236" r="0.8"/>
+    <circle cx="352" cy="220" r="0.75"/>
+    <circle cx="407" cy="194" r="0.9"/>
+    <circle cx="456" cy="170" r="0.8"/>
+  </g>
+  <path d="M98 306 C175 286 226 296 292 270 C354 246 408 220 520 132" stroke="url(#ridge)" stroke-width="2.35" stroke-linecap="round"/>
+  <path d="M206 280 C272 272 324 260 380 235 C434 212 470 172 520 130" stroke="#fff" stroke-opacity="0.22" stroke-width="0.95" stroke-linecap="round"/>
+</svg>
