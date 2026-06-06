@@ -11,6 +11,7 @@
   let dpr = 1;
   let strands = [];
   let sparks = [];
+  let impacts = [];
   let animationFrame = 0;
   let startTime = performance.now();
 
@@ -71,6 +72,20 @@
       drift: random(10, 64),
       alpha: random(0.28, 0.95)
     }));
+
+    const impactCount = mobile ? 5 : 8;
+    impacts = Array.from({ length: impactCount }, (_, index) => {
+      const lane = impactCount === 1 ? 0.5 : index / (impactCount - 1);
+      return {
+        layerX,
+        y: centerY + (lane - 0.5) * (mobile ? height * 0.16 : height * 0.26) + random(-12, 12),
+        travel: random(mobile ? 130 : 210, mobile ? 230 : 360),
+        phase: random(0, 1),
+        speed: random(0.18, 0.34),
+        scatter: random(0.65, 1.15),
+        size: random(1.2, 2.2)
+      };
+    });
   }
 
   function drawBezier(strand, time) {
@@ -176,6 +191,79 @@
     }
   }
 
+  function drawImpacts(time) {
+    for (const impact of impacts) {
+      const cycle = (time * impact.speed + impact.phase) % 1;
+      const impactStart = 0.58;
+      const impactEnd = 0.9;
+      if (cycle > impactEnd) {
+        continue;
+      }
+
+      const approach = Math.min(cycle / impactStart, 1);
+      const ease = 1 - Math.pow(1 - approach, 2.6);
+      const y = impact.y + Math.sin(time * 1.4 + impact.phase * 12) * 5;
+      const x = impact.layerX - impact.travel * (1 - ease);
+
+      const trail = ctx.createLinearGradient(x - 90, y, impact.layerX + 8, y);
+      trail.addColorStop(0, "rgba(255,255,255,0)");
+      trail.addColorStop(0.55, "rgba(210,232,255,0.18)");
+      trail.addColorStop(1, "rgba(255,255,255,0.78)");
+
+      ctx.strokeStyle = trail;
+      ctx.lineWidth = impact.size * 0.72;
+      ctx.beginPath();
+      ctx.moveTo(x - 80, y + Math.sin(time * 2 + impact.phase) * 3);
+      ctx.quadraticCurveTo((x + impact.layerX) / 2, y - 10, impact.layerX - 3, y);
+      ctx.stroke();
+
+      ctx.fillStyle = "rgba(255,255,255,0.9)";
+      ctx.beginPath();
+      ctx.arc(x, y, impact.size, 0, Math.PI * 2);
+      ctx.fill();
+
+      if (cycle < impactStart || cycle > impactEnd) {
+        continue;
+      }
+
+      const burst = Math.sin(((cycle - impactStart) / (impactEnd - impactStart)) * Math.PI);
+      const burstRadius = (22 + burst * 58) * impact.scatter;
+      const glow = ctx.createRadialGradient(impact.layerX, y, 0, impact.layerX, y, burstRadius);
+      glow.addColorStop(0, `rgba(255,255,255,${0.68 * burst})`);
+      glow.addColorStop(0.22, `rgba(190,225,255,${0.28 * burst})`);
+      glow.addColorStop(1, "rgba(255,255,255,0)");
+
+      ctx.fillStyle = glow;
+      ctx.beginPath();
+      ctx.arc(impact.layerX, y, burstRadius, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.strokeStyle = `rgba(255,255,255,${0.48 * burst})`;
+      ctx.lineWidth = 1.1;
+      ctx.beginPath();
+      ctx.arc(impact.layerX - 2, y, burstRadius * 0.72, Math.PI * 0.58, Math.PI * 1.42);
+      ctx.stroke();
+
+      ctx.strokeStyle = `rgba(180,220,255,${0.24 * burst})`;
+      ctx.lineWidth = 0.8;
+      ctx.beginPath();
+      ctx.arc(impact.layerX - 5, y, burstRadius * 1.05, Math.PI * 0.62, Math.PI * 1.38);
+      ctx.stroke();
+
+      for (let i = 0; i < 9; i += 1) {
+        const angle = Math.PI * (0.58 + i * 0.105) + Math.sin(impact.phase * 8 + i) * 0.08;
+        const distance = burstRadius * (0.22 + i * 0.07);
+        const sx = impact.layerX + Math.cos(angle) * distance;
+        const sy = y + Math.sin(angle) * distance;
+
+        ctx.fillStyle = `rgba(255,255,255,${0.55 * burst * (1 - i / 12)})`;
+        ctx.beginPath();
+        ctx.arc(sx, sy, Math.max(0.7, impact.size * (1 - i / 14)), 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+  }
+
   function render(now) {
     const elapsed = (now - startTime) / 1000;
     ctx.clearRect(0, 0, width, height);
@@ -193,6 +281,7 @@
     }
     drawSparks(elapsed);
     drawSafetyLayer(elapsed);
+    drawImpacts(elapsed);
     ctx.globalCompositeOperation = "source-over";
 
     if (!prefersReducedMotion.matches) {
