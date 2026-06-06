@@ -356,8 +356,8 @@ button {
 
 .flywheel {
   position: relative;
-  --node-size: clamp(142px, 13vw, 164px);
-  width: min(620px, 100%);
+  --node-size: clamp(164px, 14vw, 190px);
+  width: min(700px, 100%);
   aspect-ratio: 1;
   margin: 22px auto 0;
 }
@@ -375,7 +375,7 @@ button {
 }
 
 .orbit-ring--inner {
-  inset: 33%;
+  inset: 34%;
   border: 1px dashed rgba(255, 255, 255, 0.28);
   animation: orbitSpinReverse 14s linear infinite;
 }
@@ -398,8 +398,8 @@ button {
   stroke-linecap: round;
   marker-end: url("#cycle-arrowhead");
   filter: drop-shadow(0 0 9px rgba(255, 255, 255, 0.32));
-  stroke-dasharray: 440;
-  stroke-dashoffset: 880;
+  stroke-dasharray: 520;
+  stroke-dashoffset: 1040;
   animation: cycleTrace 7.5s linear infinite;
 }
 
@@ -418,8 +418,8 @@ button {
   z-index: 2;
   display: grid;
   place-items: center;
-  width: 156px;
-  height: 156px;
+  width: 168px;
+  height: 168px;
   border-radius: 50%;
   color: #fff;
   font-size: 18px;
@@ -457,7 +457,7 @@ button {
   min-height: var(--node-size);
   max-width: var(--node-size);
   max-height: var(--node-size);
-  padding: 18px;
+  padding: 20px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 50%;
@@ -478,40 +478,49 @@ button {
 }
 
 .wheel-node--left {
-  bottom: 10%;
-  left: 0;
+  bottom: 8%;
+  left: -1%;
   animation-delay: 0.8s;
 }
 
 .wheel-node--right {
-  right: 0;
-  bottom: 10%;
+  right: -1%;
+  bottom: 8%;
   animation-delay: 1.6s;
 }
 
 .wheel-node span {
-  margin-bottom: 12px;
+  margin-bottom: 9px;
   color: rgba(255, 255, 255, 0.92);
   font-size: 16px;
   font-weight: 700;
 }
 
 .wheel-node strong {
+  display: block;
+  max-width: 100%;
   color: #fff;
-  font-size: clamp(13px, 1.15vw, 16px);
+  font-size: clamp(12px, 1vw, 15px);
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.14;
+}
+
+.wheel-node strong em {
+  display: inline-block;
+  font-style: normal;
+  font-size: 0.86em;
+  line-height: 1.08;
 }
 
 .wheel-node small {
-  margin-top: 14px;
+  margin-top: 10px;
   color: rgba(255, 255, 255, 0.75);
   font-size: 10px;
   font-weight: 700;
 }
 
 .wheel-node p {
-  margin: 9px 0 0;
+  margin: 7px 0 0;
   color: rgba(255, 255, 255, 0.58);
   font-size: 10px;
   line-height: 1.35;
@@ -753,7 +762,7 @@ button {
 
 @keyframes cycleTrace {
   0% {
-    stroke-dashoffset: 880;
+    stroke-dashoffset: 1040;
     opacity: 0.38;
   }
   20% {
@@ -764,7 +773,7 @@ button {
     opacity: 0.88;
   }
   100% {
-    stroke-dashoffset: -440;
+    stroke-dashoffset: -520;
     opacity: 0.38;
   }
 }
@@ -898,13 +907,13 @@ button {
   }
 
   .flywheel {
-    --node-size: clamp(108px, 30vw, 128px);
+    --node-size: clamp(118px, 31vw, 142px);
     width: min(100%, 420px);
     margin-top: 38px;
   }
 
   .wheel-node {
-    padding: 12px;
+    padding: 13px;
   }
 
   .wheel-node span {
@@ -913,7 +922,7 @@ button {
   }
 
   .wheel-node strong {
-    font-size: 11px;
+    font-size: 10px;
   }
 
   .wheel-node small,
