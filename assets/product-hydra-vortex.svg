@@ -18,8 +18,8 @@
     <radialGradient id="well" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(430 266) rotate(90) scale(114 126)">
       <stop offset="0.15" stop-color="#000000"/>
       <stop offset="0.48" stop-color="#030303" stop-opacity="0.95"/>
-      <stop offset="0.78" stop-color="#ffffff" stop-opacity="0.04"/>
-      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.78" stop-color="#050505" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#050505" stop-opacity="0"/>
     </radialGradient>
     <filter id="blurGlow" x="-12%" y="-12%" width="124%" height="124%">
       <feGaussianBlur stdDeviation="0.75" result="blur"/>
@@ -39,7 +39,7 @@
       <rect x="22" y="0" width="260" height="380" fill="url(#fadeIn)"/>
     </mask>
   </defs>
-  <rect x="265" y="132" width="255" height="210" fill="url(#well)" opacity="0.94"/>
+  <rect x="286" y="150" width="218" height="178" fill="url(#well)" opacity="0.72"/>
   <g mask="url(#clip)" fill="none" stroke="url(#arc)" stroke-linecap="round" filter="url(#blurGlow)">
     <path d="M64 302 C92 188 182 76 330 28 C438 -6 536 22 610 92" stroke-width="0.58" opacity="0.24"/>
     <path d="M70 312 C100 196 196 84 344 42 C454 10 550 44 620 118" stroke-width="0.68" opacity="0.28"/>
