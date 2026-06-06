@@ -386,7 +386,7 @@ button {
   z-index: 1;
   width: 100%;
   height: 100%;
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(210, 218, 226, 0.58);
   pointer-events: none;
   overflow: visible;
   transform-origin: 50% 50%;
@@ -396,10 +396,10 @@ button {
 .cycle-arc {
   fill: none;
   stroke: currentColor;
-  stroke-width: 1.35;
+  stroke-width: 1.25;
   stroke-linecap: round;
   marker-end: url("#cycle-arrowhead");
-  filter: drop-shadow(0 0 9px rgba(255, 255, 255, 0.32));
+  filter: drop-shadow(0 0 7px rgba(210, 218, 226, 0.18));
 }
 
 .flywheel-center {
@@ -450,14 +450,14 @@ button {
   max-height: var(--node-size);
   padding: 20px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   background:
-    radial-gradient(circle at 50% 15%, rgba(255, 255, 255, 0.12), transparent 44%),
-    rgba(8, 8, 8, 0.86);
+    radial-gradient(circle at 50% 15%, rgba(255, 255, 255, 0.16), transparent 44%),
+    rgba(8, 8, 8, 0.94);
   box-shadow:
-    0 0 42px rgba(255, 255, 255, 0.07),
-    inset 0 0 34px rgba(255, 255, 255, 0.04);
+    0 0 42px rgba(255, 255, 255, 0.09),
+    inset 0 0 36px rgba(255, 255, 255, 0.075);
   text-align: center;
   animation: nodePulse 4.8s ease-in-out infinite;
 }
@@ -761,13 +761,13 @@ button {
   0%,
   100% {
     box-shadow:
-      0 0 42px rgba(255, 255, 255, 0.07),
-      inset 0 0 34px rgba(255, 255, 255, 0.04);
+      0 0 42px rgba(255, 255, 255, 0.09),
+      inset 0 0 36px rgba(255, 255, 255, 0.075);
   }
   50% {
     box-shadow:
-      0 0 54px rgba(190, 222, 255, 0.18),
-      inset 0 0 40px rgba(255, 255, 255, 0.07);
+      0 0 58px rgba(190, 222, 255, 0.22),
+      inset 0 0 42px rgba(255, 255, 255, 0.1);
   }
 }
 
