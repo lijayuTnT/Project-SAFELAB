@@ -389,6 +389,8 @@ button {
   color: rgba(255, 255, 255, 0.88);
   pointer-events: none;
   overflow: visible;
+  transform-origin: 50% 50%;
+  animation: cycleRotate 16s linear infinite;
 }
 
 .cycle-arc {
@@ -398,17 +400,6 @@ button {
   stroke-linecap: round;
   marker-end: url("#cycle-arrowhead");
   filter: drop-shadow(0 0 9px rgba(255, 255, 255, 0.32));
-  stroke-dasharray: 520;
-  stroke-dashoffset: 1040;
-  animation: cycleTrace 7.5s linear infinite;
-}
-
-.cycle-arc--two {
-  animation-delay: -2.5s;
-}
-
-.cycle-arc--three {
-  animation-delay: -5s;
 }
 
 .flywheel-center {
@@ -760,21 +751,9 @@ button {
   }
 }
 
-@keyframes cycleTrace {
-  0% {
-    stroke-dashoffset: 1040;
-    opacity: 0.38;
-  }
-  20% {
-    opacity: 0.96;
-  }
-  58% {
-    stroke-dashoffset: 0;
-    opacity: 0.88;
-  }
-  100% {
-    stroke-dashoffset: -520;
-    opacity: 0.38;
+@keyframes cycleRotate {
+  to {
+    transform: rotate(360deg);
   }
 }
 
