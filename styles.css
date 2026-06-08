@@ -176,6 +176,16 @@ button {
   background: transparent;
   color: #fff;
   cursor: pointer;
+  transition:
+    color 180ms ease,
+    text-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.lang-button:hover {
+  color: #fff;
+  text-shadow: 0 0 14px rgba(255, 255, 255, 0.55);
+  transform: translateY(-1px);
 }
 
 .lang-button::after {
@@ -302,20 +312,22 @@ button {
 
 .flow-labels {
   position: absolute;
-  right: clamp(24px, 5vw, 92px);
+  right: clamp(12px, 2vw, 32px);
   bottom: clamp(72px, 8vw, 116px);
-  left: clamp(440px, 43vw, 680px);
+  left: clamp(500px, 50vw, 730px);
   z-index: 2;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 24px;
+  grid-template-columns: 0.86fr 1.1fr 0.9fr;
+  gap: clamp(18px, 3vw, 54px);
   color: rgba(255, 255, 255, 0.86);
   font-size: 13px;
   font-weight: 700;
   line-height: 1.1;
+  transform: translateX(clamp(20px, 2.8vw, 48px));
 }
 
 .flow-labels span:nth-child(2) {
+  text-align: center;
   font-size: 20px;
   font-weight: 500;
 }
@@ -345,6 +357,14 @@ button {
   font-size: clamp(31px, 3.1vw, 44px);
   font-weight: 500;
   line-height: 1.18;
+}
+
+.scale-section h2 {
+  max-width: 560px;
+}
+
+.keep-line {
+  white-space: nowrap;
 }
 
 .section-heading p,
@@ -546,12 +566,18 @@ button {
   box-shadow: inset 0 0 40px rgba(255, 255, 255, 0.025);
 }
 
-.product-card::before,
-.product-card::after {
+.product-visual {
   position: absolute;
+  inset: 0;
   z-index: 0;
-  content: "";
+  width: 100%;
+  height: 100%;
+  opacity: 0.92;
   pointer-events: none;
+}
+
+.product-card--vortex .product-visual {
+  opacity: 0.78;
 }
 
 .product-card > * {
@@ -559,51 +585,9 @@ button {
   z-index: 1;
 }
 
-.product-card--terrain::before,
-.product-card--terrain-alt::before {
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 76%;
-  opacity: 1;
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  background-size: 100% 100%;
-}
-
-.product-card--terrain::before {
-  background-image: url("assets/product-picus-terrain.svg");
-}
-
-.product-card--terrain-alt::before {
-  height: 78%;
-  background-image: url("assets/product-argus-terrain.svg");
-}
-
-.product-card--terrain::after,
-.product-card--terrain-alt::after {
-  inset: 0;
-  background:
-    linear-gradient(90deg, rgba(7, 7, 7, 0.96) 0%, rgba(7, 7, 7, 0.72) 34%, rgba(7, 7, 7, 0.08) 72%, rgba(7, 7, 7, 0) 100%),
-    linear-gradient(180deg, rgba(7, 7, 7, 0.92) 0%, rgba(7, 7, 7, 0.22) 46%, rgba(7, 7, 7, 0) 100%);
-}
-
-.product-card--vortex::before {
-  right: -2%;
-  bottom: 0;
-  width: 76%;
-  height: 94%;
-  opacity: 0.92;
-  background: url("assets/product-hydra-vortex.svg") right center / 100% 100% no-repeat;
-}
-
-.product-card--vortex::after {
-  inset: 0;
-  height: auto;
-  background: linear-gradient(90deg, rgba(7, 7, 7, 0.98) 0%, rgba(7, 7, 7, 0.88) 36%, rgba(7, 7, 7, 0.2) 70%, rgba(7, 7, 7, 0) 100%);
-}
-
 .product-number {
+  position: relative;
+  z-index: 1;
   display: block;
   color: #fff;
   font-size: 32px;
@@ -612,6 +596,7 @@ button {
 
 .product-card h3 {
   position: relative;
+  z-index: 1;
   margin: 26px 0 13px;
   color: #fff;
   font-size: clamp(27px, 2.6vw, 38px);
@@ -622,6 +607,7 @@ button {
 .product-card li,
 .product-card a {
   position: relative;
+  z-index: 1;
   color: rgba(255, 255, 255, 0.76);
 }
 
@@ -653,7 +639,12 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.54);
   border-radius: 50%;
   content: "";
-  box-shadow: inset 0 0 0 3px #050505;
+  background:
+    radial-gradient(circle, rgba(255, 255, 255, 0.75) 0 1.4px, transparent 1.8px),
+    #050505;
+  box-shadow:
+    inset 0 0 0 3px #050505,
+    0 0 10px rgba(255, 255, 255, 0.08);
 }
 
 .product-card a {
@@ -669,7 +660,7 @@ button {
 
 .scale-section {
   display: grid;
-  grid-template-columns: 0.92fr 1.55fr;
+  grid-template-columns: minmax(520px, 0.98fr) minmax(0, 1.42fr);
   gap: clamp(28px, 5vw, 72px);
   align-items: center;
   padding-top: 42px;
@@ -788,8 +779,10 @@ button {
   }
 
   .flow-labels {
-    left: clamp(250px, 38vw, 430px);
+    right: 18px;
+    left: clamp(310px, 45vw, 470px);
     font-size: 11px;
+    transform: translateX(12px);
   }
 
   .product-grid {
@@ -869,6 +862,7 @@ button {
     left: 18px;
     gap: 12px;
     font-size: 10px;
+    transform: none;
   }
 
   .flow-labels span:nth-child(2) {
@@ -879,6 +873,14 @@ button {
   .products-section,
   .scale-section {
     padding-inline: 18px;
+  }
+
+  .scale-section h2 {
+    max-width: none;
+  }
+
+  .keep-line {
+    white-space: normal;
   }
 
   .flywheel {

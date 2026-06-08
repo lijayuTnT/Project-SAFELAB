@@ -1,4 +1,258 @@
 (function () {
+  const translations = {
+    en: {
+      meta: {
+        title: "XSafe AI - The Safety Layer for Intelligence",
+        description: "XSafe AI discovers risks, generates defenses, and builds safer intelligence through evaluation, data, and safety foundation models."
+      },
+      aria: {
+        primaryNav: "Primary navigation",
+        mainMenu: "Main menu",
+        footerMenu: "Footer menu",
+        home: "XSafe AI home"
+      },
+      language: {
+        current: "EN",
+        switchLabel: "Switch to Chinese"
+      },
+      nav: {
+        products: "Products",
+        technology: "Technology",
+        solutions: "Solutions",
+        resources: "Resources",
+        company: "Company"
+      },
+      cta: {
+        bookDemo: "Book a Demo",
+        watchOverview: "Watch Overview",
+        learnMore: "Learn More"
+      },
+      hero: {
+        title: "The Safety Layer<br />for Intelligence",
+        copy: "Discover Risks. Generate Defenses. Build Safer Intelligence.",
+        flowInput: "AI INPUT",
+        flowLayer: "XSafe AI<br />SAFETY LAYER",
+        flowOutput: "SAFE OUTPUT"
+      },
+      flywheel: {
+        title: "The Safety Flywheel",
+        copy: "A closed-loop system that continuously evolves AI safety.",
+        aria: "Evaluation, data, and models form a continuous improvement loop",
+        centerTop: "Continuous",
+        centerBottom: "Improvement",
+        evaluationTitle: "EVALUATION<br />(PICUS)",
+        evaluationSubtitle: "Agentic Evaluation Engine",
+        evaluationCopy: "Discover vulnerabilities anytime, anywhere.",
+        modelsTitle: "MODELS<br /><em>(SAFETY<br />FOUNDATION)</em>",
+        modelsSubtitle: "Safety Foundation Models",
+        modelsCopy: "Align and strengthen models with safety at the core.",
+        dataTitle: "DATA<br />(HYDRA)",
+        dataSubtitle: "Safety Data Engine",
+        dataCopy: "Generate diverse safety data at scale."
+      },
+      products: {
+        title: "Our Core Products",
+        picusSubtitle: "Agentic Evaluation Engine",
+        picusPoint1: "Continuous Evaluation",
+        picusPoint2: "Adaptive &amp; Flexible",
+        picusPoint3: "Real-world Simulations",
+        hydraSubtitle: "Safety Data Engine",
+        hydraPoint1: "Harmful Data Generation",
+        hydraPoint2: "Attack Data Generation",
+        hydraPoint3: "Agent Risk Action Data",
+        argusSubtitle: "Multi-Agent Security Plane",
+        argusPoint1: "Multi-Agent Governance",
+        argusPoint2: "Risk Monitoring",
+        argusPoint3: "Active Protection"
+      },
+      scale: {
+        title: "Intelligence is scaling.<br class=\"desktop-break\" /><span class=\"keep-line\">Safety must scale with it.</span>",
+        copy: "XSafe AI - Building the safety layer for a smarter tomorrow."
+      },
+      metrics: {
+        evaluations: "Evaluations<br />Executed",
+        data: "Safety Data<br />Generated",
+        models: "Foundation Models<br />Secured",
+        intelligence: "Safer Intelligence<br />for All"
+      },
+      footer: {
+        rights: "© 2026 XSafeAI.com All rights reserved.",
+        privacy: "Privacy Policy",
+        terms: "Terms of Service",
+        contact: "Contact Us"
+      }
+    },
+    zh: {
+      meta: {
+        title: "XSafe AI - 智能的安全层",
+        description: "XSafe AI 通过评估、数据与安全基础模型发现风险、生成防御并构建更安全的智能。"
+      },
+      aria: {
+        primaryNav: "主导航",
+        mainMenu: "主菜单",
+        footerMenu: "页脚菜单",
+        home: "XSafe AI 首页"
+      },
+      language: {
+        current: "中",
+        switchLabel: "切换到英文"
+      },
+      nav: {
+        products: "产品",
+        technology: "技术",
+        solutions: "方案",
+        resources: "资源",
+        company: "公司"
+      },
+      cta: {
+        bookDemo: "预约演示",
+        watchOverview: "观看概览",
+        learnMore: "了解更多"
+      },
+      hero: {
+        title: "智能时代的<br />安全层",
+        copy: "发现风险。生成防御。构建更安全的智能。",
+        flowInput: "AI 输入",
+        flowLayer: "XSafe AI<br />安全层",
+        flowOutput: "安全输出"
+      },
+      flywheel: {
+        title: "安全飞轮",
+        copy: "一个持续演进 AI 安全能力的闭环系统。",
+        aria: "评估、数据和模型构成持续改进闭环",
+        centerTop: "持续",
+        centerBottom: "改进",
+        evaluationTitle: "评估<br />（PICUS）",
+        evaluationSubtitle: "智能体评估引擎",
+        evaluationCopy: "随时随地发现潜在漏洞。",
+        modelsTitle: "模型<br /><em>（安全<br />基础模型）</em>",
+        modelsSubtitle: "安全基础模型",
+        modelsCopy: "以安全为核心对齐并强化模型。",
+        dataTitle: "数据<br />（HYDRA）",
+        dataSubtitle: "安全数据引擎",
+        dataCopy: "生成多样、可扩展的安全数据。"
+      },
+      products: {
+        title: "核心产品",
+        picusSubtitle: "智能体评估引擎",
+        picusPoint1: "持续评估",
+        picusPoint2: "自适应且灵活",
+        picusPoint3: "真实场景模拟",
+        hydraSubtitle: "安全数据引擎",
+        hydraPoint1: "有害数据生成",
+        hydraPoint2: "攻击数据生成",
+        hydraPoint3: "智能体风险动作数据",
+        argusSubtitle: "多智能体安全平面",
+        argusPoint1: "多智能体治理",
+        argusPoint2: "风险监控",
+        argusPoint3: "主动防护"
+      },
+      scale: {
+        title: "智能正在扩展。<br class=\"desktop-break\" /><span class=\"keep-line\">安全也必须同步扩展。</span>",
+        copy: "XSafe AI - 为更智能的未来构建安全层。"
+      },
+      metrics: {
+        evaluations: "已执行<br />评估",
+        data: "已生成<br />安全数据",
+        models: "已保护<br />基础模型",
+        intelligence: "更安全智能<br />惠及所有人"
+      },
+      footer: {
+        rights: "© 2026 XSafeAI.com 版权所有。",
+        privacy: "隐私政策",
+        terms: "服务条款",
+        contact: "联系我们"
+      }
+    }
+  };
+
+  const storageKey = "xsafe-language";
+  const supportedLanguages = ["en", "zh"];
+  let currentLanguage = "en";
+
+  function readStoredLanguage() {
+    try {
+      return window.localStorage.getItem(storageKey);
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function saveLanguage(language) {
+    try {
+      window.localStorage.setItem(storageKey, language);
+    } catch (error) {
+      return;
+    }
+  }
+
+  function getTranslation(language, key) {
+    return key.split(".").reduce((value, part) => {
+      if (value && Object.prototype.hasOwnProperty.call(value, part)) {
+        return value[part];
+      }
+      return undefined;
+    }, translations[language]);
+  }
+
+  function applyLanguage(language) {
+    const nextLanguage = supportedLanguages.includes(language) ? language : "en";
+    currentLanguage = nextLanguage;
+
+    document.documentElement.lang = nextLanguage === "zh" ? "zh-CN" : "en";
+
+    document.querySelectorAll("[data-i18n]").forEach((element) => {
+      const value = getTranslation(nextLanguage, element.dataset.i18n);
+      if (typeof value === "string") {
+        element.innerHTML = value;
+      }
+    });
+
+    document.querySelectorAll("[data-i18n-content]").forEach((element) => {
+      const value = getTranslation(nextLanguage, element.dataset.i18nContent);
+      if (typeof value === "string") {
+        element.setAttribute("content", value);
+      }
+    });
+
+    document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
+      const value = getTranslation(nextLanguage, element.dataset.i18nAriaLabel);
+      if (typeof value === "string") {
+        element.setAttribute("aria-label", value);
+      }
+    });
+
+    document.title = translations[nextLanguage].meta.title;
+
+    const languageLabel = document.querySelector("[data-lang-label]");
+    if (languageLabel) {
+      languageLabel.textContent = translations[nextLanguage].language.current;
+    }
+
+    const languageButton = document.querySelector(".lang-button");
+    if (languageButton) {
+      languageButton.dataset.lang = nextLanguage;
+      languageButton.setAttribute("aria-label", translations[nextLanguage].language.switchLabel);
+      languageButton.setAttribute("title", translations[nextLanguage].language.switchLabel);
+    }
+
+    saveLanguage(nextLanguage);
+  }
+
+  const storedLanguage = readStoredLanguage();
+  const initialLanguage = supportedLanguages.includes(storedLanguage) ? storedLanguage : "en";
+  const languageButton = document.querySelector(".lang-button");
+
+  if (languageButton) {
+    languageButton.addEventListener("click", () => {
+      applyLanguage(currentLanguage === "en" ? "zh" : "en");
+    });
+  }
+
+  applyLanguage(initialLanguage);
+})();
+
+(function () {
   const canvas = document.getElementById("safety-layer-canvas");
   if (!canvas) {
     return;
@@ -286,6 +540,238 @@
 
     if (!prefersReducedMotion.matches) {
       animationFrame = requestAnimationFrame(render);
+    }
+  }
+
+  function start() {
+    cancelAnimationFrame(animationFrame);
+    startTime = performance.now();
+    resize();
+    render(startTime);
+  }
+
+  window.addEventListener("resize", resize, { passive: true });
+  if (typeof prefersReducedMotion.addEventListener === "function") {
+    prefersReducedMotion.addEventListener("change", start);
+  } else if (typeof prefersReducedMotion.addListener === "function") {
+    prefersReducedMotion.addListener(start);
+  }
+  start();
+})();
+
+(function () {
+  const canvases = Array.from(document.querySelectorAll(".product-card .product-visual"));
+  if (!canvases.length) {
+    return;
+  }
+
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const scenes = canvases.map((canvas) => ({
+    canvas,
+    card: canvas.closest(".product-card"),
+    ctx: canvas.getContext("2d"),
+    width: 0,
+    height: 0,
+    dpr: 1,
+    particles: []
+  }));
+  let animationFrame = 0;
+  let startTime = performance.now();
+
+  function resizeScene(scene) {
+    const rect = scene.canvas.getBoundingClientRect();
+    scene.dpr = Math.min(window.devicePixelRatio || 1, 2);
+    scene.width = Math.max(1, Math.floor(rect.width));
+    scene.height = Math.max(1, Math.floor(rect.height));
+    scene.canvas.width = Math.floor(scene.width * scene.dpr);
+    scene.canvas.height = Math.floor(scene.height * scene.dpr);
+    scene.ctx.setTransform(scene.dpr, 0, 0, scene.dpr, 0, 0);
+    buildParticles(scene);
+  }
+
+  function buildParticles(scene) {
+    const type = scene.card ? scene.card.dataset.productVisual : "wave-left";
+    const cols = Math.max(20, Math.round(scene.width / 13));
+    const rows = Math.max(9, Math.round(scene.height / 18));
+    const particles = [];
+
+    if (type === "vortex") {
+      scene.particles = particles;
+      return;
+    }
+
+    for (let row = 0; row < rows; row += 1) {
+      for (let col = 0; col < cols; col += 1) {
+        const u = cols === 1 ? 0 : col / (cols - 1);
+        const v = rows === 1 ? 0 : row / (rows - 1);
+        particles.push({
+          u,
+          v,
+          phase: (u * 7.1 + v * 4.3) * Math.PI,
+          alpha: 0.22 + v * 0.48 + Math.sin(u * Math.PI) * 0.12,
+          radius: 0.55 + v * 0.7
+        });
+      }
+    }
+
+    scene.particles = particles;
+  }
+
+  function drawWave(scene, time, mirror) {
+    const { ctx, width, height, particles } = scene;
+    const ridgeBase = height * 0.7;
+    const ridgeLift = height * 0.3;
+    const floor = height * 0.98;
+    const direction = mirror ? -1 : 1;
+
+    ctx.save();
+    ctx.clearRect(0, 0, width, height);
+
+    const shade = ctx.createLinearGradient(0, height * 0.36, 0, height);
+    shade.addColorStop(0, "rgba(255,255,255,0)");
+    shade.addColorStop(0.72, "rgba(255,255,255,0.03)");
+    shade.addColorStop(1, "rgba(255,255,255,0)");
+    ctx.fillStyle = shade;
+    ctx.fillRect(0, 0, width, height);
+
+    for (const particle of particles) {
+      const waveU = mirror ? 1 - particle.u : particle.u;
+      const ridge = ridgeBase
+        - Math.sin(waveU * Math.PI * 0.92) * ridgeLift
+        + Math.sin(waveU * Math.PI * 2.55 + 0.45) * height * 0.085
+        - Math.sin(waveU * Math.PI * 4.1) * height * 0.035;
+      const perspective = particle.v ** 1.75;
+      const travel = Math.sin(time * 0.42 + particle.phase) * 4.5;
+      const x = (mirror ? width - particle.u * width : particle.u * width) + travel * direction;
+      const y = ridge + perspective * (floor - ridge) + Math.sin(time * 0.55 + particle.phase) * (1.8 + particle.v * 3.1);
+      const ridgeDistance = Math.abs(particle.v - 0.18);
+      const ridgeGlow = Math.max(0, 1 - ridgeDistance * 4.2);
+      const edgeFade = Math.sin(particle.u * Math.PI) ** 0.55;
+      const alpha = (particle.alpha * 0.35 + ridgeGlow * 0.45) * edgeFade;
+
+      ctx.fillStyle = `rgba(255,255,255,${Math.min(0.82, alpha)})`;
+      ctx.beginPath();
+      ctx.arc(x, y, particle.radius * (0.58 + particle.v * 0.65), 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    ctx.globalCompositeOperation = "lighter";
+    for (let line = 0; line < 5; line += 1) {
+      const offset = line * height * 0.032;
+      const gradient = ctx.createLinearGradient(mirror ? width : 0, height * 0.75, mirror ? 0 : width, height * 0.42);
+      gradient.addColorStop(0, "rgba(255,255,255,0)");
+      gradient.addColorStop(0.45, `rgba(255,255,255,${0.028 + line * 0.006})`);
+      gradient.addColorStop(1, "rgba(255,255,255,0)");
+      ctx.strokeStyle = gradient;
+      ctx.lineWidth = 0.65;
+      ctx.beginPath();
+      for (let step = 0; step <= 90; step += 1) {
+        const u = step / 90;
+        const waveU = mirror ? 1 - u : u;
+        const x = mirror ? width - u * width : u * width;
+        const y = ridgeBase
+          - Math.sin(waveU * Math.PI * 0.92) * ridgeLift
+          + Math.sin(waveU * Math.PI * 2.55 + 0.45) * height * 0.085
+          - Math.sin(waveU * Math.PI * 4.1) * height * 0.035
+          + offset
+          + Math.sin(u * Math.PI * 3.4 + time * 0.45 + line) * 2.8;
+        if (step === 0) {
+          ctx.moveTo(x, y);
+        } else {
+          ctx.lineTo(x, y);
+        }
+      }
+      ctx.stroke();
+    }
+
+    ctx.restore();
+  }
+
+  function drawVortex(scene, time) {
+    const { ctx, width, height } = scene;
+    const cx = width * 0.78;
+    const cy = height * 0.62;
+    const maxRadius = Math.min(width, height) * 0.66;
+
+    ctx.save();
+    ctx.clearRect(0, 0, width, height);
+    ctx.globalCompositeOperation = "lighter";
+
+    for (let arm = 0; arm < 9; arm += 1) {
+      const armOffset = (arm / 9) * Math.PI * 2 + time * 0.07;
+      const alpha = 0.06 + arm * 0.006;
+      ctx.strokeStyle = `rgba(255,255,255,${alpha})`;
+      ctx.lineWidth = 0.72;
+      ctx.beginPath();
+      for (let step = 0; step <= 140; step += 1) {
+        const t = step / 140;
+        const radius = maxRadius * (0.1 + t * 0.95);
+        const angle = armOffset + t * Math.PI * 2.2;
+        const x = cx + Math.cos(angle) * radius * (0.98 + t * 0.12);
+        const y = cy + Math.sin(angle) * radius * 0.78;
+        if (step === 0) {
+          ctx.moveTo(x, y);
+        } else {
+          ctx.lineTo(x, y);
+        }
+      }
+      ctx.stroke();
+    }
+
+    for (let ring = 1; ring <= 7; ring += 1) {
+      const radius = ring * maxRadius * 0.13;
+      ctx.strokeStyle = `rgba(255,255,255,${0.08 + ring * 0.01})`;
+      ctx.lineWidth = 0.8;
+      ctx.beginPath();
+      ctx.ellipse(cx, cy, radius * 1.05, radius * 0.78, 0, -Math.PI * 0.22, Math.PI * 1.34);
+      ctx.stroke();
+    }
+
+    for (let dash = 0; dash < 28; dash += 1) {
+      const t = dash / 28;
+      const angle = Math.PI * (0.9 + t * 1.58) + time * 0.08;
+      const radius = maxRadius * (0.28 + t * 0.72);
+      const x = cx + Math.cos(angle) * radius;
+      const y = cy + Math.sin(angle) * radius * 0.78;
+      ctx.fillStyle = `rgba(255,255,255,${0.08 + t * 0.18})`;
+      ctx.beginPath();
+      ctx.arc(x, y, 0.7 + t * 0.5, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    const fade = ctx.createLinearGradient(width * 0.35, 0, width, 0);
+    fade.addColorStop(0, "rgba(0,0,0,0.72)");
+    fade.addColorStop(0.32, "rgba(0,0,0,0.08)");
+    fade.addColorStop(1, "rgba(0,0,0,0)");
+    ctx.globalCompositeOperation = "destination-out";
+    ctx.fillStyle = fade;
+    ctx.fillRect(0, 0, width, height);
+
+    ctx.restore();
+  }
+
+  function render(now) {
+    const time = (now - startTime) / 1000;
+    for (const scene of scenes) {
+      const type = scene.card ? scene.card.dataset.productVisual : "wave-left";
+      if (type === "vortex") {
+        drawVortex(scene, time);
+      } else {
+        drawWave(scene, time, type === "wave-right");
+      }
+    }
+
+    if (!prefersReducedMotion.matches) {
+      animationFrame = requestAnimationFrame(render);
+    }
+  }
+
+  function resize() {
+    for (const scene of scenes) {
+      resizeScene(scene);
+    }
+    if (prefersReducedMotion.matches) {
+      render(performance.now());
     }
   }
 
