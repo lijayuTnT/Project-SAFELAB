@@ -580,7 +580,7 @@ button {
   opacity: 0.78;
 }
 
-.product-card > * {
+.product-card > :not(.product-visual) {
   position: relative;
   z-index: 1;
 }
