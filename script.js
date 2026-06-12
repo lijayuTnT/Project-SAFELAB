@@ -146,7 +146,6 @@
       terms: {
         metaTitle: "Terms of Service - XSafe AI",
         metaDescription: "Terms of Service for XSafe AI products, services, research materials, documentation, and related offerings.",
-        eyebrow: "LEGAL",
         title: "Terms of Service",
         updated: "Last updated: June 2026",
         intro: "Welcome to XSafeAI. These Terms of Service govern your access to and use of our website, products, services, software, APIs, research materials, documentation, and related offerings. By using our Services, you agree to be bound by these Terms.",
@@ -333,7 +332,6 @@
       terms: {
         metaTitle: "服务条款 - XSafe AI",
         metaDescription: "XSafe AI 产品、服务、研究材料、文档及相关内容的服务条款。",
-        eyebrow: "法律",
         title: "服务条款",
         updated: "最后更新：2026 年 6 月",
         intro: "欢迎使用 XSafeAI。本服务条款适用于您访问和使用我们的网站、产品、服务、软件、API、研究材料、文档及相关内容。使用我们的服务即表示您同意受本条款约束。",
