@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" role="img" aria-label="Fudan University mark">
+  <defs><linearGradient id="g" x1="14" y1="10" x2="58" y2="62" gradientUnits="userSpaceOnUse"><stop stop-color="#d9ecff"/><stop offset="1" stop-color="#6ea8ff"/></linearGradient></defs>
+  <circle cx="36" cy="36" r="30" fill="none" stroke="url(#g)" stroke-width="4"/>
+  <circle cx="36" cy="36" r="23" fill="none" stroke="#ffffff" stroke-opacity=".38" stroke-width="1.5"/>
+  <path d="M25 20h24v7H33v8h14v7H33v14h-8V20Z" fill="#ffffff"/>
+  <path d="M45 28c-2 3-5 5-9 6" fill="none" stroke="#9dccff" stroke-width="2.6" stroke-linecap="round"/>
+</svg>

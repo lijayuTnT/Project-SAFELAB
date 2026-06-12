@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" role="img" aria-label="Stanford University mark">
+  <path d="M18 17h36v9H30c-3.2 0-5.2 1.2-5.2 3.2 0 2.2 2.2 3.4 6.2 4.4l10.8 2.7C50 38.3 55 43 55 50.2 55 58.4 48 63 36.5 63H17v-9h22.2c4.4 0 6.8-1.4 6.8-3.8 0-2.1-1.8-3.4-5.9-4.4l-11.3-2.8C20.6 41 16 36.3 16 29.2 16 21.6 22.5 17 34.1 17H18Z" fill="#ffffff"/>
+  <path d="M37 23c4 8 4 17-.3 26" fill="none" stroke="#8fd19e" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M36 32l-5-7 6 3 5-8 1 9 8-2-6 6" fill="#8fd19e" opacity=".95"/>
+</svg>
