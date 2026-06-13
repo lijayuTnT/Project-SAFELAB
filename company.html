@@ -13,7 +13,7 @@
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23020202'/%3E%3Cpath d='M14 16h12l6 9 6-9h12L38 32l12 16H38l-6-9-6 9H14l12-16L14 16Z' fill='white'/%3E%3C/svg%3E"
     />
-    <link rel="stylesheet" href="styles.css?v=20260613-4" />
+    <link rel="stylesheet" href="styles.css?v=20260613-7" />
   </head>
   <body>
     <div class="page-shell">
@@ -169,8 +169,8 @@
             </div>
           </div>
 
-          <div class="company-split company-block">
-            <div>
+          <div class="company-split company-split--leadership company-block">
+            <div class="company-section-intro">
               <h3 data-i18n="company.leadershipTitle">Leadership</h3>
               <p data-i18n="company.leadershipCopy">An experienced leadership team with deep expertise in AI safety, research, engineering and entrepreneurship.</p>
             </div>
@@ -180,7 +180,7 @@
                 <span class="leader-role" data-i18n="company.leader1Role">Founder &amp; CEO</span>
                 <ul class="leader-points">
                   <li data-i18n="company.leader1Point1">Serial entrepreneur</li>
-                  <li data-i18n="company.leader1Point2">10+ years of experience</li>
+                  <li data-i18n="company.leader1Point2">15+ years of experience</li>
                   <li data-i18n="company.leader1Point3">Strategy &amp; Business</li>
                 </ul>
               </article>
@@ -189,47 +189,62 @@
                 <span class="leader-role" data-i18n="company.leader2Role">Founder &amp; Chief Scientist</span>
                 <ul class="leader-points">
                   <li data-i18n="company.leader2Point1">AI safety researcher</li>
-                  <li data-i18n="company.leader2Point2">10,000+ citations</li>
+                  <li data-i18n="company.leader2Point2">17,000+ citations</li>
                   <li data-i18n="company.leader2Point3">Research &amp; Trustworthy AI</li>
                 </ul>
               </article>
               <article class="company-card leader-card">
-                <h4 data-i18n="company.leader3Name">Mark Ji</h4>
+                <h4 data-i18n="company.leader3Name">Mark J.</h4>
                 <span class="leader-role" data-i18n="company.leader3Role">Founder &amp; CTO</span>
                 <ul class="leader-points">
                   <li data-i18n="company.leader3Point1">AI infrastructure expert</li>
-                  <li data-i18n="company.leader3Point2">Experience at OpenAI &amp; Mistral</li>
+                  <li data-i18n="company.leader3Point2">Experience at OpenAI &amp; Waymo</li>
                   <li data-i18n="company.leader3Point3">Engineering &amp; Platform</li>
                 </ul>
               </article>
             </div>
           </div>
 
-          <div class="company-split company-block vision-section">
-            <div>
+          <div class="company-split company-split--vision company-block vision-section">
+            <div class="company-section-intro">
               <h3 data-i18n="company.visionTitle">Our Long-Term Vision</h3>
               <p data-i18n="company.visionCopy">AI safety is a multi-decade challenge. Our roadmap is organized around three stages.</p>
             </div>
             <div class="vision-flow">
               <div class="vision-grid vision-grid--flow">
                 <article class="company-card vision-card">
-                  <span class="card-icon card-icon--agent" aria-hidden="true"></span>
-                  <span class="vision-stage" data-i18n="company.visionNow">Now</span>
+                  <span class="vision-stage" data-i18n="company.visionPhase1">PHASE 1</span>
                   <h4 data-i18n="company.vision1Title">Agent Safety</h4>
+                  <span class="vision-icon vision-icon--cube" aria-hidden="true">
+                    <svg viewBox="0 0 48 48" focusable="false">
+                      <path d="M24 5 39 13v17L24 43 9 30V13L24 5Z" />
+                      <path d="M9 13 24 22m15-9-15 9m0 21V22M14 16l20 18M34 16 14 34" />
+                    </svg>
+                  </span>
                   <p data-i18n="company.vision1Copy">Building the core safety infrastructure required to evaluate, secure, and govern AI agents.</p>
                 </article>
                 <span class="vision-arrow" aria-hidden="true">-&gt;</span>
                 <article class="company-card vision-card">
-                  <span class="card-icon card-icon--devices" aria-hidden="true"></span>
-                  <span class="vision-stage" data-i18n="company.visionNext">Next</span>
+                  <span class="vision-stage" data-i18n="company.visionPhase2">PHASE 2</span>
                   <h4 data-i18n="company.vision2Title">Safe Agent-Powered Devices</h4>
+                  <span class="vision-device-row" aria-hidden="true">
+                    <svg class="vision-device" viewBox="0 0 32 32" focusable="false"><path d="M6 9h20v13H6V9Zm-2 17h24" /></svg>
+                    <svg class="vision-device" viewBox="0 0 32 32" focusable="false"><path d="M11 4h10v24H11V4Zm4 20h2" /></svg>
+                    <svg class="vision-device" viewBox="0 0 32 32" focusable="false"><path d="M5 19h22l-3-7H9l-4 7Zm4 0v5m14-5v5M8 24h3m10 0h3" /></svg>
+                    <svg class="vision-device" viewBox="0 0 32 32" focusable="false"><path d="M9 14h14v10H9V14Zm4-6h6m-3 0v6M5 17v5m22-5v5M12 18h.1M20 18h.1M13 25h6" /></svg>
+                  </span>
                   <p data-i18n="company.vision2Copy">Extending safety capabilities to next-generation intelligent devices and physical systems.</p>
                 </article>
                 <span class="vision-arrow" aria-hidden="true">-&gt;</span>
                 <article class="company-card vision-card">
-                  <span class="card-icon card-icon--embodied" aria-hidden="true"></span>
-                  <span class="vision-stage" data-i18n="company.visionFuture">Future</span>
+                  <span class="vision-stage" data-i18n="company.visionPhase3">PHASE 3</span>
                   <h4 data-i18n="company.vision3Title">Embodied AI Safety</h4>
+                  <span class="vision-icon vision-icon--robot" aria-hidden="true">
+                    <svg viewBox="0 0 48 48" focusable="false">
+                      <path d="M14 21h20v15H14V21Zm-5 5v8m30-8v8M20 15h8m-4-8v8" />
+                      <path d="M19 27h.1M29 27h.1M20 33h8M17 36v5m14-5v5" />
+                    </svg>
+                  </span>
                   <p data-i18n="company.vision3Copy">Developing safety architectures for robots and embodied intelligent systems operating in the physical world.</p>
                 </article>
               </div>
@@ -265,6 +280,6 @@
       </footer>
     </div>
 
-    <script src="script.js?v=20260613-6"></script>
+    <script src="script.js?v=20260613-7"></script>
   </body>
 </html>
