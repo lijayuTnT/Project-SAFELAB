@@ -2181,3 +2181,315 @@ button {
     padding-inline: 18px;
   }
 }
+
+.why-card {
+  min-height: 172px;
+  padding: 26px 28px 28px;
+  border-color: rgba(255, 255, 255, 0.13);
+  background:
+    radial-gradient(circle at 92% 12%, rgba(255, 255, 255, 0.07), transparent 12rem),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.014) 44%, transparent),
+    rgba(9, 10, 10, 0.9);
+}
+
+.why-card::after {
+  display: none;
+}
+
+.why-card .company-number {
+  margin-bottom: 14px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.why-card h4 {
+  max-width: 245px;
+  min-height: 2.5em;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.why-card p {
+  max-width: 280px;
+  margin-top: 18px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  line-height: 1.62;
+}
+
+.why-icon {
+  position: absolute;
+  top: 24px;
+  right: 26px;
+  width: 42px;
+  height: 42px;
+  opacity: 0.46;
+  pointer-events: none;
+}
+
+.why-card--cube .why-icon {
+  background:
+    linear-gradient(30deg, transparent 43%, rgba(255,255,255,0.72) 45% 48%, transparent 50%) 50% 50% / 32px 32px no-repeat,
+    linear-gradient(150deg, transparent 43%, rgba(255,255,255,0.72) 45% 48%, transparent 50%) 50% 50% / 32px 32px no-repeat,
+    linear-gradient(90deg, transparent 47%, rgba(255,255,255,0.62) 49% 51%, transparent 53%) 50% 50% / 28px 32px no-repeat;
+}
+
+.why-card--cube .why-icon::before,
+.why-card--cube .why-icon::after {
+  position: absolute;
+  inset: 8px;
+  content: "";
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  transform: rotate(30deg) skewY(-30deg) scaleY(0.86);
+}
+
+.why-card--cube .why-icon::after {
+  transform: rotate(-30deg) skewY(30deg) scaleY(0.86);
+}
+
+.why-card--globe .why-icon {
+  border: 1.5px solid rgba(255, 255, 255, 0.72);
+  border-radius: 50%;
+  background:
+    linear-gradient(90deg, transparent 47%, rgba(255, 255, 255, 0.52) 49% 51%, transparent 53%),
+    linear-gradient(0deg, transparent 47%, rgba(255, 255, 255, 0.52) 49% 51%, transparent 53%);
+}
+
+.why-card--globe .why-icon::before,
+.why-card--globe .why-icon::after {
+  position: absolute;
+  inset: 4px 12px;
+  content: "";
+  border: 1px solid rgba(255, 255, 255, 0.56);
+  border-radius: 50%;
+}
+
+.why-card--globe .why-icon::after {
+  inset: 12px 4px;
+}
+
+.why-card--shield .why-icon::before {
+  position: absolute;
+  inset: 4px 8px;
+  content: "";
+  border: 1.5px solid rgba(255, 255, 255, 0.76);
+  clip-path: polygon(50% 0, 92% 17%, 82% 72%, 50% 100%, 18% 72%, 8% 17%);
+}
+
+.why-card--shield .why-icon::after {
+  position: absolute;
+  top: 15px;
+  left: 19px;
+  width: 6px;
+  height: 10px;
+  content: "";
+  border-right: 1.5px solid rgba(255, 255, 255, 0.72);
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.72);
+  transform: rotate(40deg);
+}
+
+.approach-block {
+  grid-template-columns: minmax(360px, 0.9fr) minmax(0, 1.55fr);
+  gap: clamp(28px, 4vw, 56px);
+}
+
+.approach-intro p {
+  max-width: 470px;
+  font-size: clamp(16px, 1.18vw, 19px);
+  line-height: 1.58;
+}
+
+.approach-intro .company-link {
+  margin-top: 38px;
+}
+
+.approach-card-grid {
+  gap: clamp(12px, 1.35vw, 18px);
+}
+
+.approach-card {
+  min-height: 238px;
+  padding: 0 22px 24px;
+}
+
+.approach-card h4 {
+  margin-top: 106px;
+  font-size: clamp(16px, 1.05vw, 19px);
+}
+
+.approach-card p {
+  margin-top: 18px;
+  font-size: clamp(12px, 0.88vw, 14px);
+  line-height: 1.5;
+}
+
+.approach-card .card-icon {
+  top: 24px;
+  left: 22px;
+  width: 48px;
+  height: 48px;
+}
+
+@media (max-width: 1040px) {
+  .approach-block {
+    grid-template-columns: 1fr;
+  }
+
+  .approach-intro p {
+    max-width: 620px;
+  }
+
+  .approach-card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .why-card {
+    min-height: 160px;
+    padding: 22px;
+  }
+
+  .why-icon {
+    top: 20px;
+    right: 22px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .approach-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.why-card--cube .why-icon {
+  opacity: 0.5;
+  background: none;
+}
+
+.why-card--cube .why-icon::before {
+  position: absolute;
+  inset: 7px;
+  content: "";
+  background:
+    linear-gradient(30deg, transparent 48%, rgba(255,255,255,0.72) 49% 51%, transparent 52%),
+    linear-gradient(150deg, transparent 48%, rgba(255,255,255,0.72) 49% 51%, transparent 52%),
+    linear-gradient(90deg, transparent 48%, rgba(255,255,255,0.58) 49% 51%, transparent 52%),
+    linear-gradient(30deg, transparent 48%, rgba(255,255,255,0.44) 49% 51%, transparent 52%),
+    linear-gradient(150deg, transparent 48%, rgba(255,255,255,0.44) 49% 51%, transparent 52%);
+  background-position:
+    50% 0,
+    50% 0,
+    50% 50%,
+    50% 100%,
+    50% 100%;
+  background-size:
+    28px 20px,
+    28px 20px,
+    26px 27px,
+    28px 20px,
+    28px 20px;
+  background-repeat: no-repeat;
+  border: 1.2px solid rgba(255, 255, 255, 0.68);
+  transform: rotate(30deg) skewY(-30deg) scaleY(0.86);
+}
+
+.why-card--cube .why-icon::after {
+  position: absolute;
+  inset: 7px;
+  content: "";
+  border: 1.2px solid rgba(255, 255, 255, 0.56);
+  transform: rotate(-30deg) skewY(30deg) scaleY(0.86);
+}
+
+.why-card--shield .why-icon,
+.card-icon--shield {
+  --shield-line: rgba(255, 255, 255, 0.78);
+  --shield-check: rgba(255, 255, 255, 0.72);
+}
+
+.why-card--shield .why-icon::before,
+.card-icon--shield::before {
+  position: absolute;
+  content: "";
+  border: 0;
+  background: var(--shield-line);
+  clip-path: polygon(
+    50% 0,
+    92% 17%,
+    82% 72%,
+    50% 100%,
+    18% 72%,
+    8% 17%,
+    50% 0,
+    50% 9%,
+    18% 22%,
+    27% 67%,
+    50% 88%,
+    73% 67%,
+    82% 22%,
+    50% 9%,
+    50% 0
+  );
+}
+
+.why-card--shield .why-icon::before {
+  inset: 4px 8px;
+}
+
+.card-icon--shield::before {
+  width: 17px;
+  height: 20px;
+}
+
+.why-card--shield .why-icon::after,
+.card-icon--shield::after {
+  position: absolute;
+  content: "";
+  border-color: var(--shield-check);
+}
+
+.approach-card .card-icon--shield::before {
+  width: 25px;
+  height: 30px;
+}
+
+.why-icon {
+  width: 34px;
+  height: 34px;
+  opacity: 0.42;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.why-card--cube .why-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke='%23d8d8d8' stroke-width='1.15' stroke-linejoin='round' stroke-linecap='round'%3E%3Cpath d='M16 3 27 9 16 15 5 9 16 3Z'/%3E%3Cpath d='M5 9v13l11 7V15L5 9Z'/%3E%3Cpath d='M27 9v13l-11 7V15l11-6Z'/%3E%3Cpath d='M10.5 6.1 21.5 12.1M21.5 6.1 10.5 12.1M5 22l11-6.5L27 22'/%3E%3C/svg%3E");
+}
+
+.why-card--cube .why-icon::before,
+.why-card--cube .why-icon::after,
+.why-card--shield .why-icon::before,
+.why-card--shield .why-icon::after {
+  display: none;
+}
+
+.why-card--globe .why-icon {
+  width: 34px;
+  height: 34px;
+}
+
+.why-card--shield .why-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke='%23d8d8d8' stroke-width='1.7' stroke-linejoin='round' stroke-linecap='round'%3E%3Cpath d='M16 3.5 26 8v8.3c0 5.9-4.1 10.2-10 12.2C10.1 26.5 6 22.2 6 16.3V8l10-4.5Z'/%3E%3Cpath d='m12.1 15.9 2.8 2.8 5.4-7'/%3E%3C/svg%3E");
+}
+
+.approach-card .card-icon--shield {
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke='%23f4f4f4' stroke-width='1.8' stroke-linejoin='round' stroke-linecap='round'%3E%3Cpath d='M16 3.5 26 8v8.3c0 5.9-4.1 10.2-10 12.2C10.1 26.5 6 22.2 6 16.3V8l10-4.5Z'/%3E%3Cpath d='m12.1 15.9 2.8 2.8 5.4-7'/%3E%3C/svg%3E") center / 30px 30px no-repeat,
+    rgba(255, 255, 255, 0.08);
+}
+
+.approach-card .card-icon--shield::before,
+.approach-card .card-icon--shield::after {
+  display: none;
+}

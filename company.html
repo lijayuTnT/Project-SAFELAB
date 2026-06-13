@@ -13,7 +13,7 @@
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23020202'/%3E%3Cpath d='M14 16h12l6 9 6-9h12L38 32l12 16H38l-6-9-6 9H14l12-16L14 16Z' fill='white'/%3E%3C/svg%3E"
     />
-    <link rel="stylesheet" href="styles.css?v=20260612-8" />
+    <link rel="stylesheet" href="styles.css?v=20260613-4" />
   </head>
   <body>
     <div class="page-shell">
@@ -49,17 +49,20 @@
           <div class="company-block">
             <h3 data-i18n="company.whyTitle">Why We Exist</h3>
             <div class="company-card-grid company-card-grid--three">
-              <article class="company-card">
+              <article class="company-card why-card why-card--cube">
+                <span class="why-icon" aria-hidden="true"></span>
                 <span class="company-number">01</span>
                 <h4 data-i18n="company.why1Title">Intelligence is becoming agentic.</h4>
                 <p data-i18n="company.why1Copy">AI systems are moving beyond generating answers. They are beginning to plan, decide, and act.</p>
               </article>
-              <article class="company-card">
+              <article class="company-card why-card why-card--globe">
+                <span class="why-icon" aria-hidden="true"></span>
                 <span class="company-number">02</span>
                 <h4 data-i18n="company.why2Title">Agents will operate in the real world.</h4>
                 <p data-i18n="company.why2Copy">They will use tools, access systems, collaborate with other agents, and interact with physical environments.</p>
               </article>
-              <article class="company-card">
+              <article class="company-card why-card why-card--shield">
+                <span class="why-icon" aria-hidden="true"></span>
                 <span class="company-number">03</span>
                 <h4 data-i18n="company.why3Title">Safety must evolve with intelligence.</h4>
                 <p data-i18n="company.why3Copy">As AI becomes more capable and autonomous, safety must become a foundational capability — not an afterthought.</p>
@@ -143,23 +146,23 @@
             <div class="team-backgrounds">
               <div class="team-background-group">
                 <h4 data-i18n="company.industryTitle">Industry Experience</h4>
-                <div class="logo-cloud" aria-label="Industry experience logos">
-                  <span><img class="logo-mark" src="assets/logos/openai.svg" alt="" aria-hidden="true" />OpenAI</span>
-                  <span><img class="logo-mark" src="assets/logos/google.svg" alt="" aria-hidden="true" />Google</span>
-                  <span><img class="logo-mark" src="assets/logos/microsoft.svg" alt="" aria-hidden="true" />Microsoft</span>
-                  <span><img class="logo-mark" src="assets/logos/bytedance.svg" alt="" aria-hidden="true" />ByteDance</span>
-                  <span><img class="logo-mark" src="assets/logos/alibaba.svg" alt="" aria-hidden="true" />Alibaba</span>
+                <div class="logo-cloud" aria-label="Industry experience logos" data-i18n-aria-label="company.industryLogosAria">
+                  <span><img class="logo-mark" src="assets/logos/openai.svg" alt="" aria-hidden="true" /><span data-i18n="company.logoOpenAI">OpenAI</span></span>
+                  <span><img class="logo-mark" src="assets/logos/google.svg" alt="" aria-hidden="true" /><span data-i18n="company.logoGoogle">Google</span></span>
+                  <span><img class="logo-mark" src="assets/logos/microsoft.svg" alt="" aria-hidden="true" /><span data-i18n="company.logoMicrosoft">Microsoft</span></span>
+                  <span><img class="logo-mark" src="assets/logos/bytedance.svg" alt="" aria-hidden="true" /><span data-i18n="company.logoByteDance">ByteDance</span></span>
+                  <span><img class="logo-mark" src="assets/logos/alibaba.svg" alt="" aria-hidden="true" /><span data-i18n="company.logoAlibaba">Alibaba</span></span>
                   <span class="logo-more">...</span>
                 </div>
               </div>
               <div class="team-background-group">
                 <h4 data-i18n="company.academicTitle">Academic Background</h4>
-                <div class="logo-cloud" aria-label="Academic background logos">
-                  <span><img class="logo-mark logo-mark--school" src="assets/logos/fudan.svg" alt="" aria-hidden="true" />Fudan</span>
-                  <span><img class="logo-mark logo-mark--school" src="assets/logos/tsinghua.svg" alt="" aria-hidden="true" />Tsinghua</span>
-                  <span><img class="logo-mark logo-mark--school" src="assets/logos/stanford.svg" alt="" aria-hidden="true" />Stanford</span>
-                  <span><img class="logo-mark logo-mark--school" src="assets/logos/ucla.svg" alt="" aria-hidden="true" />UCLA</span>
-                  <span><img class="logo-mark logo-mark--school" src="assets/logos/usc.svg" alt="" aria-hidden="true" />USC</span>
+                <div class="logo-cloud" aria-label="Academic background logos" data-i18n-aria-label="company.academicLogosAria">
+                  <span><img class="logo-mark logo-mark--school" src="assets/logos/fudan.svg" alt="" aria-hidden="true" /><span data-i18n="company.logoFudan">Fudan</span></span>
+                  <span><img class="logo-mark logo-mark--school" src="assets/logos/tsinghua.svg" alt="" aria-hidden="true" /><span data-i18n="company.logoTsinghua">Tsinghua</span></span>
+                  <span><img class="logo-mark logo-mark--school" src="assets/logos/stanford.svg" alt="" aria-hidden="true" /><span data-i18n="company.logoStanford">Stanford</span></span>
+                  <span><img class="logo-mark logo-mark--school" src="assets/logos/ucla.svg" alt="" aria-hidden="true" /><span data-i18n="company.logoUCLA">UCLA</span></span>
+                  <span><img class="logo-mark logo-mark--school" src="assets/logos/usc.svg" alt="" aria-hidden="true" /><span data-i18n="company.logoUSC">USC</span></span>
                   <span class="logo-more">...</span>
                 </div>
               </div>
@@ -262,6 +265,6 @@
       </footer>
     </div>
 
-    <script src="script.js?v=20260612-8"></script>
+    <script src="script.js?v=20260613-4"></script>
   </body>
 </html>
