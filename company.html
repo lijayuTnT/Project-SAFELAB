@@ -13,13 +13,13 @@
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23020202'/%3E%3Cpath d='M14 16h12l6 9 6-9h12L38 32l12 16H38l-6-9-6 9H14l12-16L14 16Z' fill='white'/%3E%3C/svg%3E"
     />
-    <link rel="stylesheet" href="styles.css?v=20260613-7" />
+    <link rel="stylesheet" href="styles.css?v=20260616-7" />
   </head>
   <body>
     <div class="page-shell">
       <header class="site-header" aria-label="Primary navigation" data-i18n-aria-label="aria.primaryNav">
         <a class="brand brand--small" href="index.html#top" aria-label="XSafe AI home" data-i18n-aria-label="aria.home">
-          <span>XSafe AI</span>
+          <span data-i18n="brand.name">XSafe AI</span>
         </a>
         <nav class="nav-links" aria-label="Main menu" data-i18n-aria-label="aria.mainMenu">
           <a href="index.html#products" data-i18n="nav.products">Products</a>
@@ -38,10 +38,8 @@
       <main id="top" class="company-page-main">
         <section class="company-section" id="company" aria-labelledby="company-title">
           <div class="company-hero">
-            <h2 id="company-title" data-i18n="company.title">Building the Safety Infrastructure<br />for the Agentic Era</h2>
+            <h2 id="company-title" data-i18n="company.title">Building the Safety Infrastructure for the Agentic Era</h2>
             <div class="company-copy">
-              <p data-i18n="company.copy1">XSafe AI is an AI safety company incubated by the Institute of Trustworthy Embodied AI at Fudan University.</p>
-              <p data-i18n="company.copy2">We build the infrastructure that helps intelligent systems remain safe, reliable, and governable.</p>
               <p data-i18n="company.copy3">Our work spans safety evaluation, safety data generation, foundation model enhancement, runtime defense, and agent governance.</p>
             </div>
           </div>
@@ -83,11 +81,36 @@
             </div>
             <div class="timeline" aria-hidden="true">
               <div>
-                <strong>2018</strong>
-                <span data-i18n="company.timeline1">Large Language Models</span>
+                <strong>2030+</strong>
+                <span data-i18n="company.timeline4">Embodied Intelligence</span>
                 <i aria-hidden="true"></i>
-                <b class="timeline-icon timeline-icon--shield"></b>
-                <em data-i18n="company.timelineOut1">Output Safety</em>
+                <b class="timeline-icon timeline-icon--robot">
+                  <svg viewBox="0 0 40 40" focusable="false" aria-hidden="true">
+                    <path d="M20 7v5" />
+                    <path d="M17.5 7h5" />
+                    <rect x="10" y="13" width="20" height="17" rx="4" />
+                    <path d="M7 19v7" />
+                    <path d="M33 19v7" />
+                    <path d="M14 31h12" />
+                    <circle cx="16" cy="21" r="1.5" />
+                    <circle cx="24" cy="21" r="1.5" />
+                    <path d="M16 26h8" />
+                  </svg>
+                </b>
+                <em data-i18n="company.timelineOut4">Embodied AI Safety</em>
+              </div>
+              <div>
+                <strong>2025</strong>
+                <span data-i18n="company.timeline3">AI Agents</span>
+                <i aria-hidden="true"></i>
+                <b class="timeline-icon timeline-icon--agent-shield">
+                  <svg viewBox="0 0 40 40" focusable="false" aria-hidden="true">
+                    <path d="M20 5l12 5v8c0 8.2-5 14-12 17-7-3-12-8.8-12-17v-8l12-5z" />
+                    <circle cx="20" cy="17" r="4" />
+                    <path d="M13.5 28c1.5-4.2 4-6 6.5-6s5 1.8 6.5 6" />
+                  </svg>
+                </b>
+                <em data-i18n="company.timelineOut3">Agent Safety</em>
               </div>
               <div>
                 <strong>2023</strong>
@@ -97,18 +120,16 @@
                 <em data-i18n="company.timelineOut2">Behavior Safety</em>
               </div>
               <div>
-                <strong>2025</strong>
-                <span data-i18n="company.timeline3">AI Agents</span>
+                <strong>2018</strong>
+                <span data-i18n="company.timeline1">Large Language Models</span>
                 <i aria-hidden="true"></i>
-                <b class="timeline-icon timeline-icon--agent-shield"></b>
-                <em data-i18n="company.timelineOut3">Agent Safety</em>
-              </div>
-              <div>
-                <strong>2030+</strong>
-                <span data-i18n="company.timeline4">Embodied Intelligence</span>
-                <i aria-hidden="true"></i>
-                <b class="timeline-icon timeline-icon--robot"></b>
-                <em data-i18n="company.timelineOut4">Embodied AI Safety</em>
+                <b class="timeline-icon timeline-icon--shield">
+                  <svg viewBox="0 0 40 40" focusable="false" aria-hidden="true">
+                    <path d="M20 5l12 5v8c0 8.2-5 14-12 17-7-3-12-8.8-12-17v-8l12-5z" />
+                    <path d="M14.5 20l4 4 7.5-9" />
+                  </svg>
+                </b>
+                <em data-i18n="company.timelineOut1">Output Safety</em>
               </div>
             </div>
           </div>
@@ -166,42 +187,6 @@
                   <span class="logo-more">...</span>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div class="company-split company-split--leadership company-block">
-            <div class="company-section-intro">
-              <h3 data-i18n="company.leadershipTitle">Leadership</h3>
-              <p data-i18n="company.leadershipCopy">An experienced leadership team with deep expertise in AI safety, research, engineering and entrepreneurship.</p>
-            </div>
-            <div class="leadership-grid">
-              <article class="company-card leader-card">
-                <h4 data-i18n="company.leader1Name">Jianjian Zhang</h4>
-                <span class="leader-role" data-i18n="company.leader1Role">Founder &amp; CEO</span>
-                <ul class="leader-points">
-                  <li data-i18n="company.leader1Point1">Serial entrepreneur</li>
-                  <li data-i18n="company.leader1Point2">15+ years of experience</li>
-                  <li data-i18n="company.leader1Point3">Strategy &amp; Business</li>
-                </ul>
-              </article>
-              <article class="company-card leader-card">
-                <h4 data-i18n="company.leader2Name">Xingjun Ma</h4>
-                <span class="leader-role" data-i18n="company.leader2Role">Founder &amp; Chief Scientist</span>
-                <ul class="leader-points">
-                  <li data-i18n="company.leader2Point1">AI safety researcher</li>
-                  <li data-i18n="company.leader2Point2">17,000+ citations</li>
-                  <li data-i18n="company.leader2Point3">Research &amp; Trustworthy AI</li>
-                </ul>
-              </article>
-              <article class="company-card leader-card">
-                <h4 data-i18n="company.leader3Name">Mark J.</h4>
-                <span class="leader-role" data-i18n="company.leader3Role">Founder &amp; CTO</span>
-                <ul class="leader-points">
-                  <li data-i18n="company.leader3Point1">AI infrastructure expert</li>
-                  <li data-i18n="company.leader3Point2">Experience at OpenAI &amp; Waymo</li>
-                  <li data-i18n="company.leader3Point3">Engineering &amp; Platform</li>
-                </ul>
-              </article>
             </div>
           </div>
 
@@ -268,7 +253,7 @@
       </main>
 
       <footer class="site-footer">
-        <a class="brand brand--small" href="index.html#top" aria-label="XSafe AI home" data-i18n-aria-label="aria.home">XSafe AI</a>
+        <a class="brand brand--small" href="index.html#top" aria-label="XSafe AI home" data-i18n-aria-label="aria.home"><span data-i18n="brand.name">XSafe AI</span></a>
         <p data-i18n="footer.rights">© 2026 XSafeAI.com All rights reserved.</p>
         <nav aria-label="Footer menu" data-i18n-aria-label="aria.footerMenu">
           <a id="resources" href="index.html#resources" data-i18n="footer.privacy">Privacy Policy</a>
@@ -280,6 +265,6 @@
       </footer>
     </div>
 
-    <script src="script.js?v=20260613-7"></script>
+    <script src="script.js?v=20260616-4"></script>
   </body>
 </html>

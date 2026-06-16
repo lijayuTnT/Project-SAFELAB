@@ -15,6 +15,9 @@
         current: "EN",
         switchLabel: "Switch to Chinese"
       },
+      brand: {
+        name: "XSafe AI"
+      },
       nav: {
         products: "Products",
         research: "Research",
@@ -50,7 +53,7 @@
         dataCopy: "Generate diverse safety data at scale."
       },
       products: {
-        title: "Our Core Products",
+        title: "Core Products",
         picusSubtitle: "Agentic Evaluation Engine",
         picusPoint1: "Continuous Evaluation",
         picusPoint2: "Adaptive &amp; Flexible",
@@ -76,7 +79,7 @@
       },
       company: {
         eyebrow: "COMPANY",
-        title: "Building the Safety Infrastructure<br />for the Agentic Era",
+        title: "Building the Safety Infrastructure for the Agentic Era",
         copy1: "XSafe AI is an AI safety company incubated by the Institute of Trustworthy Embodied AI at Fudan University.",
         copy2: "We build the infrastructure that helps intelligent systems remain safe, reliable, and governable.",
         copy3: "Our work spans safety evaluation, safety data generation, foundation model enhancement, runtime defense, and agent governance.",
@@ -258,6 +261,9 @@
         current: "中",
         switchLabel: "切换到英文"
       },
+      brand: {
+        name: "万物智安"
+      },
       nav: {
         products: "产品",
         research: "研究",
@@ -319,7 +325,7 @@
       },
       company: {
         eyebrow: "公司",
-        title: "构建智能体时代的<br />安全基础设施",
+        title: "构建智能体时代的安全基础设施",
         copy1: "XSafe AI 是一家由复旦大学可信具身智能研究院孵化的 AI 安全公司。",
         copy2: "我们构建基础设施，帮助智能系统保持安全、可靠与可治理。",
         copy3: "我们的工作覆盖安全评估、安全数据生成、基础模型增强、运行时防御与智能体治理。",
@@ -522,6 +528,7 @@
     currentLanguage = nextLanguage;
 
     document.documentElement.lang = nextLanguage === "zh" ? "zh-CN" : "en";
+    document.body.dataset.lang = nextLanguage;
 
     document.querySelectorAll("[data-i18n]").forEach((element) => {
       const value = getTranslation(nextLanguage, element.dataset.i18n);
@@ -613,7 +620,7 @@
   function buildScene() {
     const mobile = width < 720;
     const layerX = mobile ? width * 0.66 : width * 0.76;
-    const centerY = mobile ? height * 0.66 : height * 0.53;
+    const centerY = mobile ? height * 0.6 : height * 0.45;
     const leftX = mobile ? width * 0.12 : width * 0.33;
     const outputX = width + 120;
     const count = mobile ? 42 : 78;
@@ -705,7 +712,7 @@
   function drawSafetyLayer(time) {
     const mobile = width < 720;
     const layerX = mobile ? width * 0.66 : width * 0.76;
-    const centerY = mobile ? height * 0.66 : height * 0.53;
+    const centerY = mobile ? height * 0.6 : height * 0.45;
     const layerHeight = mobile ? height * 0.38 : height * 0.58;
     const top = centerY - layerHeight / 2;
     const bottom = centerY + layerHeight / 2;
@@ -845,7 +852,7 @@
     const elapsed = (now - startTime) / 1000;
     ctx.clearRect(0, 0, width, height);
 
-    const vignette = ctx.createRadialGradient(width * 0.68, height * 0.48, 0, width * 0.68, height * 0.48, width * 0.62);
+    const vignette = ctx.createRadialGradient(width * 0.68, height * 0.4, 0, width * 0.68, height * 0.4, width * 0.62);
     vignette.addColorStop(0, "rgba(255,255,255,0.06)");
     vignette.addColorStop(0.3, "rgba(80,110,135,0.05)");
     vignette.addColorStop(1, "rgba(0,0,0,0)");

@@ -128,7 +128,8 @@ button {
   font-size: clamp(58px, 11vw, 142px);
 }
 
-.brand--hero-cn {
+.brand--hero-cn,
+body[data-lang="zh"] .brand--hero {
   letter-spacing: 0.08em;
 }
 
@@ -223,9 +224,9 @@ button {
 
 .hero-section {
   position: relative;
-  min-height: 760px;
-  height: clamp(760px, 72vw, 930px);
-  max-height: 980px;
+  min-height: 640px;
+  height: clamp(640px, 58vw, 780px);
+  max-height: 820px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   isolation: isolate;
 }
@@ -251,7 +252,7 @@ button {
   position: relative;
   z-index: 1;
   width: min(740px, calc(100% - 48px));
-  padding-top: clamp(148px, 16vw, 244px);
+  padding-top: clamp(104px, 9.5vw, 148px);
   margin-left: clamp(24px, 4vw, 58px);
 }
 
@@ -335,7 +336,7 @@ button {
 .flow-labels {
   position: absolute;
   right: clamp(12px, 2vw, 32px);
-  bottom: clamp(72px, 8vw, 116px);
+  bottom: clamp(118px, 12vw, 172px);
   left: clamp(500px, 50vw, 730px);
   z-index: 2;
   display: grid;
@@ -751,8 +752,10 @@ button {
 }
 
 .company-hero {
-  max-width: 720px;
+  max-width: 1280px;
   padding-top: 10px;
+  margin-inline: auto;
+  text-align: center;
 }
 
 .eyebrow {
@@ -765,19 +768,21 @@ button {
 }
 
 .company-hero h2 {
-  margin: 0;
+  margin: 0 auto;
   color: #fff;
-  font-size: clamp(42px, 5vw, 72px);
+  font-size: clamp(34px, 3.2vw, 48px);
   font-weight: 500;
-  line-height: 1.05;
+  line-height: 1.08;
   letter-spacing: -0.03em;
+  white-space: nowrap;
 }
 
 .company-copy {
   display: grid;
   gap: 14px;
-  max-width: 590px;
-  margin-top: 28px;
+  max-width: 780px;
+  margin: 24px auto 0;
+  text-align: center;
 }
 
 .company-copy p,
@@ -797,16 +802,20 @@ button {
 }
 
 .company-block {
-  margin-top: clamp(34px, 5vw, 68px);
+  margin-top: clamp(44px, 5vw, 68px);
 }
 
 .company-block > h3,
+.challenge-intro h3,
+.approach-intro h3,
 .company-split h3,
 .mission-bar h3 {
   margin: 0 0 18px;
   color: #fff;
   font-size: clamp(24px, 2.4vw, 34px);
   font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
 }
 
 .company-card-grid {
@@ -816,6 +825,7 @@ button {
 
 .company-card-grid--three {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .company-card {
@@ -1174,10 +1184,6 @@ button {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.challenge-intro h3 {
-  margin-bottom: 22px;
-}
-
 .challenge-intro p {
   max-width: 260px;
   font-size: clamp(17px, 1.45vw, 22px);
@@ -1283,27 +1289,38 @@ button {
   color: rgba(255, 255, 255, 0.84);
 }
 
+.timeline-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.timeline-icon svg path,
+.timeline-icon svg rect,
+.timeline-icon svg circle {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.timeline-icon svg circle {
+  fill: currentColor;
+  stroke: none;
+}
+
 .timeline-icon::before,
 .timeline-icon::after {
   position: absolute;
   content: "";
 }
 
-.timeline-icon--shield::before,
-.timeline-icon--agent-shield::before {
-  inset: 3px 7px 2px;
-  border: 2px solid currentColor;
-  clip-path: polygon(50% 0, 92% 16%, 82% 70%, 50% 100%, 18% 70%, 8% 16%);
-}
-
-.timeline-icon--shield::after {
-  top: 10px;
-  left: 14px;
-  width: 6px;
-  height: 10px;
-  border-right: 1.6px solid currentColor;
-  border-bottom: 1.6px solid currentColor;
-  transform: rotate(40deg);
+.timeline-icon:has(svg)::before,
+.timeline-icon:has(svg)::after {
+  display: none;
 }
 
 .timeline-icon--people::before {
@@ -1324,40 +1341,6 @@ button {
   border: 1.8px solid currentColor;
   border-bottom: 0;
   border-radius: 15px 15px 0 0;
-}
-
-.timeline-icon--agent-shield::after {
-  top: 11px;
-  left: 13px;
-  width: 8px;
-  height: 8px;
-  border: 1.4px solid currentColor;
-  border-radius: 50%;
-  box-shadow: 0 8px 0 -3px currentColor;
-}
-
-.timeline-icon--robot::before {
-  top: 9px;
-  left: 6px;
-  width: 22px;
-  height: 17px;
-  border: 1.8px solid currentColor;
-  border-radius: 5px;
-  background:
-    radial-gradient(circle at 34% 47%, currentColor 0 1.6px, transparent 2px),
-    radial-gradient(circle at 66% 47%, currentColor 0 1.6px, transparent 2px);
-}
-
-.timeline-icon--robot::after {
-  top: 4px;
-  left: 16px;
-  width: 2px;
-  height: 7px;
-  background: currentColor;
-  box-shadow:
-    0 -3px 0 currentColor,
-    -13px 17px 0 0 currentColor,
-    13px 17px 0 0 currentColor;
 }
 
 .team-backgrounds {
@@ -1440,7 +1423,6 @@ button {
 
 .company-split--vision {
   position: relative;
-  margin-top: 24px;
   padding-bottom: 32px;
   overflow: hidden;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -1799,12 +1781,13 @@ button {
   }
 
   .hero-section {
-    min-height: 710px;
-    height: 780px;
+    min-height: 620px;
+    height: 680px;
   }
 
   .flow-labels {
     right: 18px;
+    bottom: 104px;
     left: clamp(310px, 45vw, 470px);
     font-size: 11px;
     transform: translateX(12px);
@@ -1948,14 +1931,14 @@ button {
   }
 
   .hero-section {
-    min-height: 760px;
+    min-height: 640px;
     height: auto;
-    padding-bottom: 210px;
+    padding-bottom: 150px;
   }
 
   .hero-content {
     width: calc(100% - 36px);
-    padding-top: 116px;
+    padding-top: 86px;
     margin-left: 18px;
   }
 
@@ -1984,7 +1967,7 @@ button {
 
   .flow-labels {
     right: 18px;
-    bottom: 52px;
+    bottom: 72px;
     left: 18px;
     gap: 12px;
     font-size: 10px;
@@ -2008,7 +1991,8 @@ button {
   }
 
   .company-hero h2 {
-    font-size: clamp(34px, 11vw, 48px);
+    font-size: clamp(31px, 8.5vw, 44px);
+    white-space: normal;
   }
 
   .company-card {
@@ -2390,7 +2374,7 @@ button {
 
 .why-card {
   min-height: 172px;
-  padding: 26px 28px 28px;
+  padding: 26px 22px 28px;
   border-color: rgba(255, 255, 255, 0.13);
   background:
     radial-gradient(circle at 92% 12%, rgba(255, 255, 255, 0.07), transparent 12rem),
@@ -2416,11 +2400,11 @@ button {
 }
 
 .why-card p {
-  max-width: 280px;
+  max-width: min(100%, 420px);
   margin-top: 18px;
   color: rgba(255, 255, 255, 0.72);
-  font-size: 13px;
-  line-height: 1.62;
+  font-size: clamp(11px, 0.92vw, 13px);
+  line-height: 1.5;
 }
 
 .why-icon {
